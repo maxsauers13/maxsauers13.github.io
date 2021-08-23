@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NBA Trading Desk</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,300i,400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fonts.css">
+  </head>
+  <body>
+
+    <!-- Main Nav START -->
+    <nav class="main-nav fixed">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="nav-header d-flex justify-content-between align-items-center">
+              <a href="index.html" class="logo" title="LOGO">
+                <img class="logo-img" src="../img/fire_logo.png" alt="LOGO">
+              </a>
+            </div>
+            <div class="nav-wrap">
+              <ul class="nav-wrap__list menu">
+              <li><a href="index.html" class='btn-login'><span class='ic-sx24'></span>Home</a></li>
+              <li><a href="trade.html" class='btn-login'><span class='ic-g'></span>Trade</a></li>
+              <li><a href='login.html' class='btn-login'><span class='ic-sx21'></span>Login</a></li>";
+              <li><a href='signup.html' class='btn-login'><span class='ic-sx22'></span>Sign Up</a></li>";
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Main Nav END -->
+    
+<!-- Trade Section START -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9 col-md-9">
+      <?php
+        if (isset($_SESSION["useruid"])) {
+          echo "<h1>" . $_SESSION["usersname"] . "'s Trading Desk</h1>";
+        } else {
+            echo "<h1>The Trading Desk</h1>";
+        }
+      ?>
+      <?php
+            include_once 'includes/dbh.inc.php';
+            include_once 'includes/functions.inc.php';
+
+            $result = get_player($conn);
+            while($player = mysqli_fetch_assoc($result)) {
+              echo "<div class='news-link'><img class='poster' src='/img/jordan.png' /><span class='hot-news'>" . $player["playerPrice"] . "</span><h3 class='news-log' style='text-align: center; margin-right:60px;'>" . $player["playerName"] . "</h3><a href='buy.php' class='btn-view' style='margin-top:25px; margin-right:130px'><span class='ic-sx24'></span> Buy</a><a href='sell.php' class='btn-view' style='margin-right:150px; margin-top:25px'><span class='ic-sx24'></span> Sell</a></div>";
+            }
+        ?>
+      </div>
+    <div class="col-lg-3 col-md-3">
+      <div class="right-block">
+          <div class="n-m">Current Player Prices</div>
+          <!-- use a for loop and echo each n-m-item -->
+          <?php
+            include_once 'includes/dbh.inc.php';
+            include_once 'includes/functions.inc.php';
+
+            $result = get_player($conn);
+            $total = 0;
+            while($player = mysqli_fetch_assoc($result)) {
+              $total = $total + 1;
+              echo "<div class='n-m-item'><span class='online-o'></span> " . $player["playerName"] . ": " . $player["playerPrice"] . "</div>";
+            }
+
+            echo "<p class='tdx-strom'> Total Players: " . $total . "</p>";
+          ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="section site-footer bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+                <img class="logo-img my-3" style="height:50px;" src="../img/fire_logo.png" alt="LOGO">
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <p class="footer-text">© Max Sauers 2021</p>
+            </div>
+        </div>
+    </div>
+</footer>
