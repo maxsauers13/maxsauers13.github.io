@@ -1,0 +1,162 @@
+.main-nav {
+    padding:15px 0;
+    transition:padding .4s, background-color .8s, box-shadow .35s;
+    -webkit-transition:padding .4s, background-color .8s, box-shadow .35s;
+}
+@media (min-width:575px) {
+    .container {
+        width: 100%;
+        min-height: 100%;
+        min-width: 1200px;
+        margin: 0 auto;
+    }
+}
+.logo-img,
+  .alt-logo-img {
+      height:25px;
+      transition:height .4s;
+      -webkit-transition:height .4s;
+      COLOR: #9da9b5;
+      font-size: 28px;
+      font-weight: 700;
+  }
+  .nav-wrap {
+    position:absolute;
+    top:0px;
+    right: 14px;
+}
+.nav-wrap__list {
+    list-style:none;
+    display: -webkit-inline-box;
+    float: left;
+    margin-top: 13px;
+}
+.nav-wrap__list > li {
+    margin-right:30px;
+}
+.nav-wrap__list > li a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #9da9b5;
+    text-transform: uppercase;
+    padding: 6px 0px;
+    transition:color .35s;
+    -webkit-transition:color .35s;
+}
+.nav-wrap__list > li a:hover {
+    text-decoration:none;
+}
+.dark-layout .nav-wrap__list > li a {
+    color:#fff;
+}
+.dark-layout .sticky .nav-wrap__list > li a {
+    color:#a6a6ad;
+}
+a.btn-login {
+    background: linear-gradient(to right, #ffa857, #fe5a73);
+    padding: 0px 10px;
+    color: #fff;
+    border-radius: 3px;
+    width: 190px;
+    height: 53px;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 10px 65px 0px #ccd4e0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    float: left;
+    transition: .5s;
+    line-height: 45px;
+    text-align: -webkit-center;
+}
+a.btn-login:hover {
+    box-shadow: 0px 20px 45px 0px #ccd4e0;
+    background: linear-gradient(to right, #ffb26b, #ff6a80);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+a.btn-startgames {
+    background: linear-gradient(to right, #42a4f3, #5260d5);
+    padding: 0px 10px;
+    color: #fff;
+    border-radius: 3px;
+    width: 190px;
+    height: 53px;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 10px 65px 0px #ccd4e0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+    line-height: 45px;
+    text-align: -webkit-center;
+    float: left;
+    margin-left: 15px;
+    transition: .5s;
+}
+a.btn-startgames:hover {
+    background: linear-gradient(to right, #55b2fd, #6573ea);
+    box-shadow: 0px 20px 45px 0px #ccd4e0;
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+span.ic-g {
+    width: 30px;
+    height: 30px;
+    background: url(/icons/g.png) no-repeat;
+    display: -webkit-box;
+    
+    background-size: contain;
+    margin-left: 10px;
+    float: left;
+    margin-top: 12px;
+    padding-right: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+span.ic-sx22 {
+    width: 21px;
+    height: 21px;
+    background: url(/icons/ic22.png) no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    float: left;
+    margin-top: 12px;
+    padding-right: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+span.ic-sx21 {
+    width: 21px;
+    height: 21px;
+    background: url(/icons/ic26.png) no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    float: left;
+    margin-top: 12px;
+    padding-right: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+span.ic-sx24 {
+    width: 23px;
+    height: 15px;
+    background: url(/icons/eye.png) no-repeat;
+    background-size: contain;
+    margin-left: 10px;
+    float: left;
+    margin-top: 13px;
+    padding-right: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.index-intro {
+    margin-top:100px;
+}
+.signup-form {
+    margin-top:100px;
+}
+.index-intro {
+    margin-top:100px;
+}
