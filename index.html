@@ -25,15 +25,8 @@
               <ul class="nav-wrap__list menu">
               <li><a href="index.php" class='btn-login'><span class='ic-sx24'></span>Home</a></li>
               <li><a href="trade.php" class='btn-login'><span class='ic-g'></span>Trade</a></li>
-                <?php
-                  if (isset($_SESSION["useruid"])) {
-                    echo "<li><a href='account.php' class='btn-login'><span class='ic-sx21'></span>" . $_SESSION["useruid"] . "</a></li>";
-                    echo "<li><a href='includes/logout.inc.php' class='btn-login'><span class='ic-sx22'></span>Logout</a></li>";
-                  } else {
-                    echo "<li><a href='login.php' class='btn-login'><span class='ic-sx21'></span>Login</a></li>";
-                    echo "<li><a href='signup.php' class='btn-login'><span class='ic-sx22'></span>Sign Up</a></li>";
-                  }
-                ?>
+              <li><a href='login.php' class='btn-login'><span class='ic-sx21'></span>Login</a></li>";
+              <li><a href='signup.php' class='btn-login'><span class='ic-sx22'></span>Sign Up</a></li>";
               </ul>
             </div>
           </div>
@@ -75,13 +68,7 @@
               <p class="how-to-games">Have Questions?</p>
               <p class="desctops">Check out the rules page for more information on how to play.</p>
             </a>
-            <?php 
-              if (isset($_SESSION["useruid"])) {
-                echo "<a href='account.php' class='block-s1 p2'><p class='how-to-games'>Your Account</p><p class='desctops'>Look at your past trades and your total profit in your profile page.</p></a>";
-              } else {
-                echo "<a href='login.php' class='block-s1 p2'><p class='how-to-games'>Your Account</p><p class='desctops'>Look at your past trades and your total profit in your profile page.</p></a>";
-              }
-              ?>
+            <a href='login.php' class='block-s1 p2'><p class='how-to-games'>Your Account</p><p class='desctops'>Look at your past trades and your total profit in your profile page.</p></a>";
           </div>
         </div>
       </div>
